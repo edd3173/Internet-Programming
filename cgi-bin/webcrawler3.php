@@ -104,9 +104,11 @@ while(1){
 
         // latest Anchor
         $AnchPos--;
+       //echo "We returned to pos : $AnchPos <br>";
 
         //update url and html
         $url = $Anchors[$AnchPos];
+        //echo "We returned to Anchor : $url <br>";
         $html = file_get_html($url);
 
 
@@ -142,8 +144,13 @@ function GetDomain($URL){
         return $parsedURL['host'];
 }
 
+function PrintCurAnchors($Array){
+        for($i=0;$i<count($Array);$i++){
+               echo $Array[$i], " ";
+        }
+}
+
 ?>
 
 </body>
 </html>
-
